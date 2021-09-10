@@ -9,7 +9,7 @@ interface Props {
     textBtn: string;
 }
 
-export function Button( { textBtn }: Props ) {
+export function TagButton( { textBtn }: Props ) {
     return (
         <Btn>
             <TextBtn>{textBtn}</TextBtn>

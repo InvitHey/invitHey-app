@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from './Button';
+
+import { TagButton }  from '../TagButton';
 
 import { View } from 'react-native';
 
@@ -27,7 +28,7 @@ export function PeopleCard( { nickName, normalName }: Props ) {
                     <NickName>{nickName}</NickName>
                     <NormalName>{normalName}</NormalName>
                 </View>
-                <Button 
+                <TagButton 
                     textBtn='Texto'
                 />
             </PeopleInfo>

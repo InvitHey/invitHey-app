@@ -9,14 +9,11 @@ export default function TestPage() {
 
   return (
     <GlobalApp>
-      <PeopleCard 
-        nickName='eubryann_'
-        normalName='Bryan Steiyer'
-      />
-    </GlobalApp>
-      <ButtonSwitch isEnabled={true} toggleSwitch ={() => {}}/>
-      <ButtonSwitch isEnabled={true} toggleSwitch ={() => {}}/>
-      <ResearchInput />
+     <PeopleCard 
+      nickName='Bryan'
+      text='Nao sei'
+      user='Bryan'
+     />
     </GlobalApp >
   )
 }

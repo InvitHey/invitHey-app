@@ -20,10 +20,11 @@ export function Tabs() {
       }}
     >
       <Tab.Screen
-        name='Onboarding'
-        component={Routes.Onboarding}
+        name='Event'
+        component={Routes.Event}
         options={{
-          headerShown: false,
+          // headerShown: false,
+          header: props =>  <Header page='Meus Eventos' />,
           tabBarIcon: (({ size, color }) => (
             <MaterialIcons
               name='home'

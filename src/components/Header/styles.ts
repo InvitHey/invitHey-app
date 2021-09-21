@@ -3,7 +3,7 @@ import { Feather } from '@expo/vector-icons';
  
 
 export const Container = styled.View`
-    background-color: ${(props) => props.theme.colors.white};
+    background-color: #FCFCFC;
     height: 56px;
     width: 100%;
     flex-direction: row;

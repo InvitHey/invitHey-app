@@ -7,7 +7,7 @@ type Props = {
 
 
 export const Container = styled.SafeAreaView<Props>`
-    padding-top: ${Platform.OS === 'android' ? 55 : 0}px;
+    padding-top: ${Platform.OS === 'android' ? 24 : 0}px;
     padding-left: 25px;
     padding-right: 25px;
     flex: 1;

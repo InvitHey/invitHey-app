@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import GlobalComponent from '../../components/GlobalApp';
 
 import bg from '../../assets/images/bg.png';
@@ -36,7 +36,23 @@ const icons = {
     local: 'pin-drop'
 }
 
+const filter = {
+    confirmed: 'confirmed',
+    followers: 'followers'
+}
+
 export default function Event() {
+
+    const [btnActive, setBtnActive] = useState('');
+    const [filterActive, setFilterActive] = useState('all');
+    function handleBtnActive(type: string) {
+        setBtnActive(type);
+      }
+    
+    function handleFilterActive(type: string) {
+      setFilterActive(type);
+    }
+
     return (
         <GlobalComponent>
             <Container>
@@ -80,8 +96,16 @@ export default function Event() {
                         <LocalDescription>Ilha paradisíaca de Great Exuma, Bahamas</LocalDescription>
                     </Local>
                     <Buttons>
-                        <TagButton textBtn='146 Confirmados' />
-                        <TagButton textBtn='560 Seguidores' />
+                        <TagButton 
+                            textBtn='146 Confirmados' 
+                            isActive={filterActive === filter.confirmed}
+                            handleButton={() => handleFilterActive(filter.confirmed)}
+                        />
+                        <TagButton 
+                            textBtn='560 Seguidores' 
+                            isActive={filterActive === filter.followers}
+                            handleButton={() => handleFilterActive(filter.followers)} 
+                        />
                     </Buttons>
                     <Description>
                         <EventDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget venenatis dolor, at commodo nulla. Donec vehicula massa interdum nisi cursus, quis convallis nibh venenatis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget venenatis dolor, at commodo nulla. Donec vehicula massa interdum nisi cursus, quis convallis nibh venenatis.

@@ -1,3 +1,4 @@
+export { default as Followers } from './Profile/Followers';
 export { default as SignUp} from './SignUp';
 export { default as SignIn } from './SignIn';
 export { default as Welcome } from './Welcome';

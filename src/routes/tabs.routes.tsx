@@ -34,10 +34,10 @@ export function Tabs() {
         }}
       />
       <Tab.Screen
-        name='Seguidores'
-        component={Routes.Followers}
+        name='CreateEvent'
+        component={Routes.CreateEvent}
         options={{
-          header: props =>  <Header page='Seguidores' />,
+          header: props =>  <Header page='Criar Evento' />,
           tabBarIcon: (({ size, color }) => (
             <MaterialIcons
               name='event'

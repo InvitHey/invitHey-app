@@ -1,3 +1,4 @@
+export { CreateEvent } from './CreateEvent';
 export { Followers } from './Followers';
 export { Event } from './Event';
 export { default as Home } from './Home';

@@ -27,12 +27,11 @@ export const MaskedInput = styled(TextInputMask)<InputProps>`
 `
 
 export const Input = styled(TextInput)<InputProps>`
-  padding-left: 200px;
-  height: 56px;
+  height: 48px;
   width: 100%;
   border-radius: 40px; 
   border-color: ${props => props.error ? props.theme.colors.red : props.theme.colors.textGray};
-  padding-left: 45px;
+  padding: 8px 16px;
   background-color: ${props => props.theme.colors.lightGray};
 `
 

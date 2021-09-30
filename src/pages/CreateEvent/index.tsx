@@ -12,14 +12,18 @@ import {
     Row,
     Condition,
     EventDescription,
-    Description
 } from './styles';
+
+type Props = {
+    title: string;
+}
 
 import GlobalComponent from '../../components/GlobalApp';
 import { Input } from '../../components/ResearchInput/styles';
 import ButtonSwitch from '../../components/ButtonSwitch';
+import { EventCategory } from '../../components/EventCategory';
 
-export function CreateEvent() {
+export function CreateEvent( { title }: Props ) {
 
     const [enabled, setEnabled] = useState(false);
     function handleChange() {
@@ -96,14 +100,36 @@ export function CreateEvent() {
                             <Title>Descrição do Evento</Title>  
                             <Condition>(Max. 425 caracteres)</Condition>  
                         </Row>
-                        <EventDescription>
-                            <Description>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ante neque, pretium vitae velit nec, tempor commodo diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur tempus, dui quis vulputate feugiat, dolor ante maximus tortor, nec rutrum augue augue in nisl. Duis condimentum ac metus non condimentum. Duis varius orci dolor, ac euismod nunc sodales non doneci vittae.
-                            </Description>
-                        </EventDescription>
+                            <EventDescription 
+
+                            />
                         <Separator />
                         <Title>Selecione o tipo de evento:</Title>
                 </View>
+                <EventCategory 
+                    title='Social'
+                    onPress={() => {}}
+                />
+                <EventCategory 
+                    title='Corporativo'
+                    onPress={() => {}}
+                />
+                <EventCategory 
+                    title='Religioso'
+                    onPress={() => {}}
+                />
+                <EventCategory 
+                    title='Acadêmico e Educacional'
+                    onPress={() => {}}
+                />
+                <EventCategory 
+                    title='Cultural e entretenimento'
+                    onPress={() => {}}
+                />
+                <EventCategory 
+                    title='Esportivo'
+                    onPress={() => {}}
+                />
             </InputsList>
 
         </GlobalComponent>

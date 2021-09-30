@@ -25,22 +25,15 @@ export const Row = styled.View`
     justify-content: space-between;
 `;
 
-export const Description = styled.Text`
-    ${(props) => {
-        return `
-        color: ${ props.theme.colors.darkGray};
-        font-size: ${props.theme.typography.smallFont};
-        font-family: ${props.theme.typography.regular};
-        `
-    }}
-`;
 
-export const EventDescription = styled.View`
+
+export const EventDescription = styled.TextInput.attrs({
+    multiline: true,
+    maxLenght: 425
+})`
     background-color: #EDEFF3;
     padding: 16px;
-    width: 100%;
     border-radius: 16px;
-    margin-bottom: 24px;
 `;
 
 export const Category = styled.View`
